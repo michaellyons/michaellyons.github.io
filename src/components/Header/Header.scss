@@ -1,0 +1,11 @@
+.route--active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.route--active > div {
+  box-shadow: none !important;
+}
+.large-button button {
+  height: 80px !important;
+  width: 80px !important;
+}

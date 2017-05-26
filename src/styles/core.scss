@@ -1,0 +1,117 @@
+@import 'base';
+@import '~normalize.css/normalize';
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #eee;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.flexbox,
+.flex {
+  display: flex;
+}
+.flexWrap,
+.flexW {
+  flex-wrap: wrap;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.relative {
+  position: relative;
+}
+.hvrAppear,
+.hvrShade {
+  position: absolute;
+  top: 0;
+  border-radius: 4px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.23s ease-out;
+}
+.hvrWrap {
+  overflow: hidden;
+}
+.hvrAppear {
+  opacity: 0;
+}
+.hvrAppearDown {
+  position: relative;
+  top: -2em;
+  transition: all 0.23s ease-out;
+}
+.hvrWrap:hover .hvrAppear {
+  opacity: 1;
+}
+
+.hvrWrap:hover .hvrShade {
+  background: rgba(0,0,0,0.4);
+}
+.hvrWrap:hover .hvrLink {
+  cursor: pointer;
+}
+.hvrWrap:hover .hvrAppearDown {
+  top: 0;
+}
+
+#root > div { background: none !important; }
+
+.disabled a {
+  color: lightgrey;
+}
+.disabled a:hover {
+  text-decoration: none;
+}
+.cPad {
+  padding: 0px 10px;
+}
+.pad1 {
+  padding: 10px;
+}
+.pad2 {
+  padding: 20px;
+}
+.pad3A {
+  padding: 30px;
+}
+.marg0 {
+  margin: 0px;
+}
+.marg0A {
+  margin: 0px auto;
+}
+.marg1 {
+  margin: 10px;
+}
+.marg2 {
+  margin: 20px;
+}
+.marg3 {
+  margin: 30px;
+}
+.marg3A {
+  margin: 30px auto;
+}

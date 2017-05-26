@@ -1,0 +1,50 @@
+.duck {
+  display: block;
+  width: 120px;
+  margin: 1.5rem auto;
+}
+.sectionContainer {
+  height: 95%;
+  background: lightgrey;
+  min-height: 600px;
+}
+.sectionContainer:after {
+  content: '';
+}
+.largefont {
+  font-size: 2em;
+}
+.pad0 {
+  padding: 0px;
+}
+.accordion {
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.32s ease-in-out;
+}
+.accordionOpen {
+  height: 120px;
+}
+.clickSpan {
+  background: #BBDEFB;
+  padding: 0px 2px;
+}
+.clickSpan:hover {
+  color: white;
+  cursor: pointer;
+}
+.vidContainer {
+  width: 100%;
+  z-index: 1;
+  background: black;
+  display: flex;
+  justify-content: center;
+  padding: 10;
+  position: relative;
+  left: 0;
+  border-radius: 6px;
+  transition: opacity 0.32s ease-in-out;
+}
+.vidShow {
+}
