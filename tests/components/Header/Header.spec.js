@@ -9,24 +9,20 @@ describe('(Component) Header', () => {
     _wrapper = shallow(<Header />)
   })
 
-  it('Renders Face Image', () => {
-    const myFace = _wrapper.find('#my_face')
-    expect(myFace).to.exist
-  })
-  it('Renders Name', () => {
+  it('Renders Email', () => {
     const siteTitle = _wrapper.find('#site_title')
     expect(siteTitle).to.exist
-    const myName = siteTitle.find('#my_name')
-    expect(myName).to.exist
-
-    expect(myName.text()).to.match(/Michael J. Lyons/)
-  })
-  it('Renders Job Title', () => {
-    const siteTitle = _wrapper.find('#site_title')
-    expect(siteTitle).to.exist
-    const myTitle = siteTitle.find('#my_title')
+    const myTitle = siteTitle.find('#my_email')
     expect(myTitle).to.exist
 
-    expect(myTitle.text()).to.match(/Software Engineer/)
+    expect(myTitle.text()).to.match(/mlyons000@gmail.com/)
+  })
+  it('Renders Phone', () => {
+    const siteTitle = _wrapper.find('#site_title')
+    expect(siteTitle).to.exist
+    const myTitle = siteTitle.find('#my_phone')
+    expect(myTitle).to.exist
+
+    expect(myTitle.text()).to.match(/714.362.1630/)
   })
 })

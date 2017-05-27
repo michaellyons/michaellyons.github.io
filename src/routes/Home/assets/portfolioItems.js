@@ -1,8 +1,14 @@
+let env = process.env.NODE_ENV || 'development'
+
+export function getURL (url) {
+  return env === 'production' ? './dist/' + url : url
+}
+
 export default [
   {
     title: 'Cooking School',
     subtitle: 'Wolfgang Puck',
-    image: './dist/wolfgang.jpg',
+    image: getURL('wolfgang.jpg'),
     technology: ['js', 'css3'],
     desc: 'A website for Wolfgang Puck that displays videos and information about his Online Cooking School.',
     link: 'https://www.wolfgangpuckcookingschool.com/'
@@ -10,7 +16,7 @@ export default [
   {
     title: 'React Launch Bar',
     subtitle: 'Open Source',
-    image: './dist/bars.png',
+    image: getURL('bars.png'),
     technology: ['js', 'react'],
     desc: 'An open source React Bar Chart component inspired by SpaceX.',
     link: 'https://michaellyons.github.io/react-launch-bar/'
@@ -18,7 +24,7 @@ export default [
   {
     title: 'React Launch Gauge',
     subtitle: 'Open Source',
-    image: './dist/gauges.png',
+    image: getURL('gauges.png'),
     technology: ['js', 'react'],
     desc: 'An open source React Circular Gauge component inspired by SpaceX\'s launch display.',
     link: 'https://michaellyons.github.io/react-launch-gauge/'
@@ -26,7 +32,7 @@ export default [
   {
     title: 'React Launch Timeline',
     subtitle: 'Open Source',
-    image: './dist/launch.png',
+    image: getURL('launch.png'),
     technology: ['js', 'react'],
     desc: 'An open source React component inspired by SpaceX\'s launch display.',
     link: 'https://michaellyons.github.io/react-launch-timeline/'
@@ -34,7 +40,7 @@ export default [
   {
     title: 'Welding Warehouse',
     subtitle: 'Welding Warehouse Inc',
-    image: './dist/welder.png',
+    image: getURL('welder.png'),
     technology: ['js', 'php'],
     desc: 'A catalogue website for a welding supply company.',
     link: 'https://www.weldingwarehouseinc.com/'
@@ -42,7 +48,7 @@ export default [
   {
     title: 'React Amazon Gallery',
     subtitle: 'Open Source',
-    image: './dist/gallery.png',
+    image: getURL('gallery.png'),
     technology: ['js', 'react'],
     desc: 'An open source React component inspired by Amazon\'s simple product display.',
     link: 'http://rag.js.org/'
@@ -51,7 +57,7 @@ export default [
     title: 'Pick A Color',
     subtitle: 'CSS Fun (2/2)',
     technology: ['css3'],
-    image: './dist/pickacolor.png',
+    image: getURL('pickacolor.png'),
     desc: 'The second of simple CSS experiments. This is a better color-picker display than the HTML default.',
     link: 'https://codepen.io/mlyons/pen/dWvPpW'
   },
@@ -59,7 +65,7 @@ export default [
     title: 'Loading Rings',
     subtitle: 'CSS Fun (1/2)',
     technology: ['css3'],
-    image: './dist/css_rings.png',
+    image: getURL('css_rings.png'),
     desc: 'The first of simple CSS experiments. This is an attempt at a loading spinner.',
     link: 'https://codepen.io/mlyons/pen/JNWPbL'
   },
@@ -67,7 +73,7 @@ export default [
     title: 'Innovation 720',
     subtitle: 'Innovation 720',
     technology: ['js', 'php'],
-    image: './dist/innovation720.png',
+    image: getURL('innovation720.png'),
     link: 'https://www.innovation720.com/'
   }
 ]

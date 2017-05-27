@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './HomeView.scss'
-import { Postcard, PortfolioInfo, PortfolioCard } from 'components/Display'
+import { ParallaxWrap, LazyImage, Postcard, PortfolioInfo, PortfolioCard } from 'components/Display'
 import IconButton from 'material-ui/IconButton'
 import ClearIcon from 'material-ui/svg-icons/content/clear'
 import Header from 'components/Header'
@@ -11,15 +11,16 @@ import Youtube from 'react-youtube'
 import PORT_ITEMS from '../assets/portfolioItems'
 import skillTree from '../assets/skills'
 import workExperience from '../assets/experience'
+import getURL from 'utils/getURL'
 
-const intro = `I am a Full Stack NodeJS Developer with 5 years of \
+const intro = `Full Stack NodeJS Developer with 4+ years of \
 professional experience working on modern (SPA) projects. I currently use the MERN stack to \
 build my applications.`
 
 const interests =
 `I am interested in applications/robotics for automated \
-food production, and concerned about the lack of entertaining, \
-educational content for Thorium nuclear energy.`
+food production, and concerned about how we will feed people \
+that don't live on Earth.`
 
 const currentPlace = `I am the primary Software Engineer building and managing \
 a custom application that handles media inventory and resource/logistics management for \
@@ -181,7 +182,7 @@ export class HomeView extends React.Component {
       maxWidth: 800
     }
     let playerOpts = {
-      width: widthB - 40 || '100%',
+      width: widthB - 80 || '100%',
       height: 560 + '',
       playerVars: {
         autoplay: 1
@@ -189,37 +190,47 @@ export class HomeView extends React.Component {
     }
     return (
       <div>
-        <div id='container' className='container marg3A'>
-          <div className='cPad'>
-            <Postcard
-              style={{ boxShadow: '0px 0px 4px 0px grey', padding: 10 }}
-              size={100}
-              depth={2}
-              round
-              image='./dist/face.jpg' />
-            <div id='main-title' className='h2'>
+        <ParallaxWrap
+          background={<LazyImage src={getURL('mars_its.jpg')} />}
+          style={{ minHeight: 250 }} />
+        <div
+          id='container'
+          style={{ position: 'relative', top: '-60px' }}
+          className='container center'>
+          <div className='flex center'>
+            <div style={{ margin: 'auto', padding: 6, boxShadow: '0px 0px 4px 0px grey', background: 'white' }}>
+              <Postcard
+                size={150}
+                depth={2}
+                image={getURL('face.jpg')} />
+            </div>
+          </div>
+          <div id='main-title' className='h2'>
               Michael J. Lyons
             </div>
-            <div className='h4'>
+          <div className='h4'>
               mlyons000@gmail.com
             </div>
-            <div style={summaryTextStyle} className='marg0A largefont'>
-              {intro}
-            </div>
+          <div style={summaryTextStyle} className='marg0A largefont'>
+            {intro}
           </div>
-
         </div>
-        <div className='container marg3A'>
-          <div className='h2 cPad'>
+        <ParallaxWrap
+          background={<LazyImage src={getURL('launch.jpg')} />}
+          style={{ minHeight: 250 }}>
+          <div className='container marg3A center'>
+            <div style={{ padding: 20, background: 'rgba(0,0,0,0.5)', color: 'white', borderRadius: 4 }}>
+              <div className='h2 cPad'>
             Currently
           </div>
-          <div style={summaryTextStyle} className='cPad marg0A largefont'>
-            {currentPlace}
+              <div style={summaryTextStyle} className='cPad marg0A largefont'>
+                {currentPlace}
+              </div>
+            </div>
           </div>
-        </div>
-
+        </ParallaxWrap>
         <div className='container marg3A'>
-          <div className='h2 cPad'>
+          <div className='h2 cPad center'>
             Projects of Olde
           </div>
           <div className='flex flexW' style={{ justifyContent: 'center' }}>
@@ -236,8 +247,12 @@ export class HomeView extends React.Component {
             </span>
           </div>
         </div>
-        <div className='container marg3A'>
-          <div className='h2 cPad'>
+        <ParallaxWrap
+          background={<LazyImage src={getURL('mars_its.jpg')} />}
+          style={{ minHeight: 250 }}>
+          <div className='container marg3A'>
+            <div style={{ padding: 20, background: 'rgba(0,0,0,0.5)', color: 'white', borderRadius: 4 }}>
+              <div className='h2 cPad center'>
             Interests
 						{
 							showVideo &&
@@ -246,38 +261,40 @@ export class HomeView extends React.Component {
     onClick={this.props.stopVid} />
 							</IconButton>
 						}
-          </div>
-          <div style={{ position: 'relative' }}>
-            <div
-              style={{
-                ...summaryTextStyle,
-                zIndex: 2,
-                height: showVideo ? 0 : undefined,
-                opacity: showVideo ? 0 : 1 }}
-              className='cPad marg0A largefont'>
-              {interests}
-              <div>
+              </div>
+              <div style={{ position: 'relative' }}>
+                <div
+                  style={{
+                    ...summaryTextStyle,
+                    zIndex: 2,
+                    height: showVideo ? 0 : undefined,
+                    opacity: showVideo ? 0 : 1 }}
+                  className='cPad marg0A largefont'>
+                  {interests}
+                  <div style={{ display: 'none' }}>
 							Have ~10 minutes to spare? <span className='clickSpan' onClick={this.watchVid}>
 							Click here</span> to watch a video and
 							learn how we will power the future.
-						</div>
-            </div>
-            <div
-              style={{
-                display: showVideo ? 'flex' : 'none',
-                padding: 5,
-                opacity: showVideo ? 1 : 0,
-                position: showVideo ? 'relative' : 'absolute' }}
-              className={'vidContainer'}>
-              <Youtube
-                style={{ margin: 'auto' }}
-                videoId={showVideo ? 'N2vzotsvvkw' : ''}
-                opts={playerOpts} />
+              </div>
+                </div>
+                <div
+                  style={{
+                    display: showVideo ? 'flex' : 'none',
+                    padding: 5,
+                    opacity: showVideo ? 1 : 0,
+                    position: showVideo ? 'relative' : 'absolute' }}
+                  className={'vidContainer'}>
+                  <Youtube
+                    style={{ margin: 'auto' }}
+                    videoId={showVideo ? 'N2vzotsvvkw' : ''}
+                    opts={playerOpts} />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </ParallaxWrap>
         <div className='container marg3A'>
-          <div className='h2 cPad'>
+          <div className='h2 cPad center'>
             Work Experience
           </div>
           <div style={summaryTextStyle} className='cPad marg0A'>
@@ -289,11 +306,13 @@ export class HomeView extends React.Component {
             })}
           </div>
         </div>
-        <div className='flex sectionContainer' style={{ justifyContent: 'center' }}>
+        <ParallaxWrap
+          background={<LazyImage src={getURL('launch_2.jpg')} />}
+          style={{ minHeight: 500 }}>
           <div style={{ margin: 'auto', width: '100%', textAlign: 'center' }}>
             <Header />
           </div>
-        </div>
+        </ParallaxWrap>
       </div>
     )
   }

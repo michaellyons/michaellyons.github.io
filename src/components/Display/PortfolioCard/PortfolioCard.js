@@ -45,18 +45,21 @@ export default class PortfolioCard extends Component {
         boxShadow: (focus === n ? '0px 0px 8px 0px #0288d1' : '0px 0px 4px 0px #555')
       }}>
       <div className='hvrLink' />
-      <div className='hvrShade' />
+      <div
+        style={{
+          position: 'absolute',
+          background: 'rgba(0,0,0,0.5)',
+          width: '100%',
+          height: '45%',
+          color: 'white',
+          bottom: 0,
+          left: 0,
+          padding: 10 }}>
+        <div className='h5' style={{ margin: '0px 0px 8px 0px' }}>{ subtitle }</div>
+        <div className='h4' style={{ margin: 0 }}>{ title }</div>
+      </div>
+      <div className='hvrAppear' style={{ background: 'rgba(0,0,0,0.5)', height: '55%', color: 'white' }}>
 
-      <div className='hvrAppear' style={{ color: 'white' }}>
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            padding: 10 }}>
-          <div className='h5'>{ subtitle }</div>
-          <div className='h4' style={{ margin: 0 }}>{ title }</div>
-        </div>
         <div className='hvrAppearDown' style={{ color: 'white' }}>
           <IconButton
             onClick={this.handleOpen}
