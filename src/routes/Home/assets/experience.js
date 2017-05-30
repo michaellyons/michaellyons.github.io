@@ -27,7 +27,7 @@ export default [
     'and social-media promotion integration. I managed' +
     'communication between various stakeholders of promotional programs.',
     highlights: [
-      'Cofounded a social media marketing agency that' +
+      'Cofounded a social media marketing agency that ' +
       'managed marketing for various businesses in Southern California.',
       'Largest client was Norm Reeves Honda (Largest USA Honda Dealership).'
     ]
