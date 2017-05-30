@@ -16,7 +16,6 @@ let localStyles = {
     margin: 'auto 0px'
   },
   position: {
-    display: 'inline',
     fontWeight: 'bold'
   },
   org: {
@@ -79,13 +78,10 @@ export default class WorkItem extends Component {
             {position}
           </div>
           {
-                  org
-                  ? <span>
-                    {', '}
-                    <span style={localStyles.org}>{org}</span>
-                  </span>
-                  : null
-                }
+            org
+            ? <div style={localStyles.org}>{org}</div>
+            : null
+          }
         </div>
         <div style={{ flexShrink: 0, ...localStyles.timeSection, ...titleStyle }}>
           <div style={{ margin: '0 4px' }} className='glyphicon glyphicon-time' />

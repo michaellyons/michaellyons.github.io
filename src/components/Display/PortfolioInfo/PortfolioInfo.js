@@ -24,14 +24,14 @@ export default class PortfolioInfo extends Component {
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}>
         <div className='flex'>
           <span style={{ float: 'left', flexShrink: 0 }}>
-            <IconButton>
+            <IconButton style={{ width: 24, height: 24, padding: '12px 0px' }}>
               <ClearIcon
                 onClick={focusRow} />
             </IconButton>
           </span>
           <div style={{ flex: 1, display: 'block', padding: 5 }}>
             <div style={{ flexShrink: 0, marginBottom: 5 }}>
-              <div style={{ fontSize: '2em' }}>
+              <div style={{ fontSize: '2em', whiteSpace: 'nowrap' }}>
                 {title}
               </div>
               <div>For: {subtitle}</div>

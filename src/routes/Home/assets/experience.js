@@ -6,7 +6,7 @@ export default [
     description: 'I work on the design and development of enterprise resource' +
     ' management and media planning software. Using the Google Cloud Platform,' +
     ' our cluster of services can be accessed anywhere on Earth by our internal' +
-    " team of analysts. With a small team, I've built and maintained the system" +
+    ' team of analysts. With a small team, I\'ve built and maintained the system' +
     ' that enables powerful digital management over physical advertising' +
     ' inventories.',
     highlights: [
@@ -14,6 +14,22 @@ export default [
       'administration powered by an Express REST API hosted on Google\'s ' +
       'Cloud Compute Engine.',
       'Implemented MongoDB geospatial functionality to query a db of retail locations within arbitrary shapes on a map.'
+    ]
+  },
+  {
+    position: 'Principal',
+    org: 'Millennial Policy Institute',
+    startDate: '2013-12',
+    endDate: '2015-08',
+    description: 'Cofounded a social media marketing agency that' +
+    ' managed marketing for various businesses in Southern California.' +
+    ' L' +
+    'and social-media promotion integration. I managed' +
+    'communication between various stakeholders of promotional programs.',
+    highlights: [
+      'Cofounded a social media marketing agency that' +
+      'managed marketing for various businesses in Southern California.',
+      'Largest client was Norm Reeves Honda (Largest USA Honda Dealership).'
     ]
   },
   {

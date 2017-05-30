@@ -105,7 +105,7 @@ export class HomeView extends React.Component {
         }))}>
         {interpolatedStyles =>
                 // first render: a, b, c. Second: still a, b, c! Only last one's a, b.
-          <div className='col-xs-12 cPad'>
+          <div className='col-xs-12 pad0'>
             {interpolatedStyles.map(config => {
               let item = PORT_ITEMS[config.key]
               return <PortfolioInfo
@@ -130,7 +130,7 @@ export class HomeView extends React.Component {
     let isFocus = focus === i
     return <div
       key={i}
-      className='col-xs-6 col-md-3 cPad'
+      className='col-xs-12 col-sm-6 col-md-3 cPad'
       style={{ borderRadius: 6, background: isFocus && 'lightblue' }}>
       {
                 itm
@@ -147,12 +147,21 @@ export class HomeView extends React.Component {
               }
     </div>
   }
+  getRowCount (width) {
+    if (width >= 992) {
+      return 4
+    } else if (width >= 768) {
+      return 2
+    } else {
+      return 1
+    }
+  }
   buildRows () {
     let { width } = this.state
     let { home } = this.props
     let { show } = home
     let rows = []
-    let rowCount = width >= 992 ? 4 : 2
+    let rowCount = this.getRowCount(width)
     for (let i = 0; i < show; i++) {
       let row = []
       for (let u = 0; u < rowCount; u++) {
@@ -173,11 +182,11 @@ export class HomeView extends React.Component {
   }
   render () {
     let { home } = this.props
-    let { widthB } = this.state
+    let { widthB, width } = this.state
     let { show, showVideo } = home
     let portfolioRows = this.buildRows()
-
-    let maxRows = portfolioRows.length >= (parseInt(PORT_ITEMS.length / 4) + (PORT_ITEMS.length % 4 > 0 ? 1 : 0))
+    let rowCount = this.getRowCount(width)
+    let maxRows = portfolioRows.length >= (parseInt(PORT_ITEMS.length / rowCount) + (PORT_ITEMS.length % rowCount > 0 ? 1 : 0))
     let summaryTextStyle = {
       maxWidth: 800
     }
