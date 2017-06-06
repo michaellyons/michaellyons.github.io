@@ -21,11 +21,6 @@ export default [
     org: 'Millennial Policy Institute',
     startDate: '2013-12',
     endDate: '2015-08',
-    description: 'Cofounded a social media marketing agency that' +
-    ' managed marketing for various businesses in Southern California.' +
-    ' L' +
-    'and social-media promotion integration. I managed' +
-    'communication between various stakeholders of promotional programs.',
     highlights: [
       'Cofounded a social media marketing agency that ' +
       'managed marketing for various businesses in Southern California.',

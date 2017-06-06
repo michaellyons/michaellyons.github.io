@@ -14,6 +14,14 @@ export default [
     link: 'https://www.wolfgangpuckcookingschool.com/'
   },
   {
+    title: 'React Launch Line',
+    subtitle: 'Open Source',
+    image: getURL('linechart.png'),
+    technology: ['js', 'react'],
+    desc: 'An open source React Line Chart component inspired by SpaceX.',
+    link: 'https://michaellyons.github.io/react-launch-line/'
+  },
+  {
     title: 'React Launch Bar',
     subtitle: 'Open Source',
     image: getURL('bars.png'),

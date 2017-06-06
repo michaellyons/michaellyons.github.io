@@ -18,9 +18,9 @@ professional experience working on modern (SPA) projects. I currently use the ME
 build my applications.`
 
 const interests =
-`I am interested in applications/robotics for automated \
-food production, and concerned about how we will feed people \
-that don't live on Earth.`
+`I am interested in software/robotic applications that will assist \
+in humanity's transition to sustainable food production. I believe the future \
+of food must be completely innovated in order to successfully feed humanity.`
 
 const currentPlace = `I am the primary Software Engineer building and managing \
 a custom application that handles media inventory and resource/logistics management for \
@@ -216,17 +216,17 @@ export class HomeView extends React.Component {
           </div>
           <div id='main-title' className='h2'>
               Michael J. Lyons
-            </div>
+          </div>
           <div className='h4'>
               mlyons000@gmail.com
-            </div>
+          </div>
           <div style={summaryTextStyle} className='marg0A largefont'>
             {intro}
           </div>
         </div>
         <ParallaxWrap
           background={<LazyImage src={getURL('launch.jpg')} />}
-          style={{ minHeight: 250 }}>
+          style={{ minHeight: 450 }}>
           <div className='container marg3A center'>
             <div style={{ padding: 20, background: 'rgba(0,0,0,0.5)', color: 'white', borderRadius: 4 }}>
               <div className='h2 cPad'>
@@ -240,7 +240,7 @@ export class HomeView extends React.Component {
         </ParallaxWrap>
         <div className='container marg3A'>
           <div className='h2 cPad center'>
-            Projects of Olde
+            Projects
           </div>
           <div className='flex flexW' style={{ justifyContent: 'center' }}>
             {
@@ -256,9 +256,22 @@ export class HomeView extends React.Component {
             </span>
           </div>
         </div>
+        <div className='container marg3A'>
+          <div className='h2 cPad center'>
+            Work Experience
+          </div>
+          <div style={summaryTextStyle} className='cPad marg0A'>
+            {workExperience.map((workItem, i) => {
+              return <WorkItem
+                key={i}
+                last={i === (workExperience.length - 1)}
+                {...workItem} />
+            })}
+          </div>
+        </div>
         <ParallaxWrap
           background={<LazyImage src={getURL('mars_its.jpg')} />}
-          style={{ minHeight: 250 }}>
+          style={{ minHeight: 450 }}>
           <div className='container marg3A'>
             <div style={{ padding: 20, background: 'rgba(0,0,0,0.5)', color: 'white', borderRadius: 4 }}>
               <div className='h2 cPad center'>
@@ -302,19 +315,7 @@ export class HomeView extends React.Component {
             </div>
           </div>
         </ParallaxWrap>
-        <div className='container marg3A'>
-          <div className='h2 cPad center'>
-            Work Experience
-          </div>
-          <div style={summaryTextStyle} className='cPad marg0A'>
-            {workExperience.map((workItem, i) => {
-              return <WorkItem
-                key={i}
-                last={i === (workExperience.length - 1)}
-                {...workItem} />
-            })}
-          </div>
-        </div>
+        <div style={{ height: 80 }} />
         <ParallaxWrap
           background={<LazyImage src={getURL('launch_2.jpg')} />}
           style={{ minHeight: 500 }}>

@@ -35,7 +35,8 @@ export default class PortfolioCard extends Component {
       style } = this.props
 
     return <div
-      className='relative hvrWrap'
+      className='relative hvrWrap hvrLink'
+      onClick={this.handleOpen}
       style={{
         backgroundImage: "url('" + image + "')",
         backgroundPosition: 'center',
