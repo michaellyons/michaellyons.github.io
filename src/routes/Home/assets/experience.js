@@ -13,7 +13,9 @@ export default [
       'Built a large React webapp for entity management, media inventory ' +
       'administration powered by an Express REST API hosted on Google\'s ' +
       'Cloud Compute Engine.',
-      'Implemented MongoDB geospatial functionality to query a db of retail locations within arbitrary shapes on a map.'
+      'Implemented MongoDB geospatial functionality to query a db ' +
+      'of retail locations within arbitrary shapes on a map.',
+      'Coordinated development and operations integration with Family Dollar corporate management (Fortune 500)'
     ]
   },
   {
@@ -40,7 +42,8 @@ export default [
     highlights: [
       'Managed key account relationships for retailer-based marketing and various ' +
       'connected ad clients.',
-      'Responsible for creating key business materials for sales and internal communications.'
+      'Responsible for creating key business materials for sales and internal communications.',
+      'Account management included NBC, Coca-cola, United States Olympic Committee.'
     ]
   },
   {

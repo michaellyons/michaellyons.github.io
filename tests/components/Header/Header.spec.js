@@ -23,6 +23,6 @@ describe('(Component) Header', () => {
     const myTitle = siteTitle.find('#my_phone')
     expect(myTitle).to.exist
 
-    expect(myTitle.text()).to.match(/714.362.1630/)
+    expect(myTitle.text()).to.match(/302.401.1383/)
   })
 })

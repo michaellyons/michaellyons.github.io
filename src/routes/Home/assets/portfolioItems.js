@@ -38,12 +38,12 @@ export default [
     link: 'https://michaellyons.github.io/react-launch-gauge/'
   },
   {
-    title: 'React Launch Timeline',
+    title: 'React Launch Progress',
     subtitle: 'Open Source',
     image: getURL('launch.png'),
     technology: ['js', 'react'],
     desc: 'An open source React component inspired by SpaceX\'s launch display.',
-    link: 'https://michaellyons.github.io/react-launch-timeline/'
+    link: 'https://michaellyons.github.io/react-launch-progress/'
   },
   {
     title: 'Welding Warehouse',

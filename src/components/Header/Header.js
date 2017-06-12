@@ -30,7 +30,7 @@ export const Header = ({ location }) => (
         </div>
         <PhoneIcon style={{ height: 60, width: 60 }} color='white' />
         <div className='largefont' id='my_phone'>
-        714.362.1630
+          {'302.401.1383'}
         </div>
       </div>
     </div>
