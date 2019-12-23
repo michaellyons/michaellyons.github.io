@@ -22,7 +22,7 @@
     "key-spacing"          : 0,
     "no-tabs"              : 0,
     "jsx-quotes"           : [2, "prefer-single"],
-    "max-len"              : [2, 140, 2],
+    "max-len"              : [2, 240, 2],
     "object-curly-spacing" : [2, "always"]
   }
 }

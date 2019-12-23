@@ -29,13 +29,13 @@ export default class WorkItem extends Component {
     contentStyle: PropTypes.object,
     titleStyle: PropTypes.object,
     org: PropTypes.string,
-    icon: PropTypes.any,
+    // icon: PropTypes.any,
     last: PropTypes.bool,
     startDate: PropTypes.any,
     endDate: PropTypes.any,
     position: PropTypes.any,
-    highlights: PropTypes.arrayOf(PropTypes.string),
-    title: PropTypes.string
+    highlights: PropTypes.arrayOf(PropTypes.string)
+    // title: PropTypes.string
   };
   static defaultProps = {
     highlights: []

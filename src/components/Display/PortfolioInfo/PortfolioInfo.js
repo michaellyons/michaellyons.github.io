@@ -4,14 +4,14 @@ import ClearIcon from 'material-ui/svg-icons/content/clear'
 
 export default class PortfolioInfo extends Component {
   static propTypes = {
-    style: PropTypes.object,
+    // style: PropTypes.object,
     config: PropTypes.object,
     technology: PropTypes.any,
     item: PropTypes.object,
-    focusRow: PropTypes.func,
-    image: PropTypes.any,
-    height: PropTypes.any,
-    width: PropTypes.any
+    focusRow: PropTypes.func
+    // image: PropTypes.any,
+    // height: PropTypes.any,
+    // width: PropTypes.any
   };
 
   render () {
