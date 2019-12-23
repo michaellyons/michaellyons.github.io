@@ -13,9 +13,8 @@ import skillTree from '../assets/skills'
 import workExperience from '../assets/experience'
 import getURL from 'utils/getURL'
 
-const intro = `Full Stack NodeJS Developer with 4+ years of \
-professional experience working on modern (SPA) projects. I currently use the MERN stack to \
-build my applications.`
+const intro = `Full Stack NodeJS Developer with 5+ years of \
+professional experience working on modern web products. `
 
 const interests =
 `I am interested in software/robotic applications that will assist \
@@ -240,7 +239,7 @@ export class HomeView extends React.Component {
         </ParallaxWrap>
         <div className='container marg3A'>
           <div className='h2 cPad center'>
-            Projects
+            Previous Work
           </div>
           <div className='flex flexW' style={{ justifyContent: 'center' }}>
             {

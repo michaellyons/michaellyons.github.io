@@ -1,8 +1,20 @@
 export default [
   {
+    position: 'Lead Frontend Engineer',
+    org: 'NexTravel, Inc',
+    startDate: '2018-04',
+    endDate: '2019-12',
+    description: 'Working with a small team, I led the frontend development for rebuilding an entire PHP-rendered application with a modern React-based application.',
+    highlights: [
+      'Built a GraphQL server with NodeJS on AWS to support a React Native mobile application.',
+      'Worked directly with Delta/ATPCO to deliver a modern display format for airline flight options.'
+    ]
+  },
+  {
     position: 'Software Engineer',
     org: 'Innovation 720, LLC',
     startDate: '2014-09',
+    endDate: '2018-03',
     description: 'I work on the design and development of enterprise resource' +
     ' management and media planning software. Using the Google Cloud Platform,' +
     ' our cluster of services can be accessed anywhere on Earth by our internal' +
