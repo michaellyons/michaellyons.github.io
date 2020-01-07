@@ -74,6 +74,7 @@
     "url": "git+https://github.com/michaellyons/michaellyons.github.io.git"
   },
   "author": "Michael Lyons <mlyons000@gmail.com> (http://michaellyons.github.io)",
+  "homepage": "https://michaellyons.github.io",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.17.0",
